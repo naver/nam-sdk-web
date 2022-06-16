@@ -4,6 +4,8 @@
 WEB SDK에 대한 문의사항은 이 저장소에 [이슈](http://github.com/naver/nam-sdk-web/issues)로 등록해주시면 됩니다.
 
 
+
+
 ## 저작권
 
 ⓒ NAVER Corporation All Rights Reserved.
