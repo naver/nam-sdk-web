@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test NAM SDK</title>
+    <script async src="https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js"></script>
+    <script>
+      window.gladsdk = window.gladsdk || { cmd: [] };
+
+      window.gladsdk.cmd.push(function () {
+        var adSlotInfo = {
+          adUnitId: 'WEB_nw_banner-N345765840',
+          adSlotElementId: 'division',
+        };
+
+        window.gladsdk.defineAdSlot(adSlotInfo);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="division"></div>
+    <script>
+      window.gladsdk.cmd.push(function () {
+        var adSlot = window.gladsdk.findAdSlot('division');
+        window.gladsdk.displayAd(adSlot);
+      });
+    </script>
+
+    <button id="refresh">Refresh</button>
+    <script>
+      document.getElementById('refresh').addEventListener('click', function () {
+        var adSlot = window.gladsdk.findAdSlot('division');
+        window.gladsdk.refreshAdSlots([adSlot]);
+      });
+    </script>
+  </body>
+</html>
