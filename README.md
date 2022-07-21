@@ -206,6 +206,23 @@ NAM WEB SDK에 대한 전체 가이드 문서는 [여기](https://naver.github.i
 
 완성된 HTML은 [여기](./examples/event.html)에서 확인할 수 있습니다.
 
+### 광고 클릭 핸들러 등록
+
+- `gladsdk.findAdSlot('adSlotElementId').setClickHandler()`를 이용해서 특정 광고 슬롯에서 클릭 이벤트가 발생하면 SDK 내장 클릭 핸들러를 대신하는 커스텀한 클릭 핸들러를 등록할 수 있습니다.
+
+    ```html
+    <script>
+      window.gladsdk.cmd.push(function () {
+        gladsdk.findAdSlot('adSlotElementId').setClickHandler(function (curl, furl, ext) {
+          // curl : click url(string), furl?: fallback url(string | undefined), ext?: extra(any | undefined)
+  console.debug('curl', curl, 'furl', furl, 'ext', ext);
+        });
+      });
+    </script>
+    ```
+
+완성된 HTML은 [여기](./examples/setClickHandler.html)에서 확인할 수 있습니다.
+
 ---
 
 ## 광고 파라미터 설정 가이드
