@@ -4,7 +4,7 @@ Naver Ad Manager는 높은 단가의 ‘네이버 성과형 광고 플랫폼’(
 
 NAM WEB SDK에 대한 문의사항은 이 저장소에 [이슈](http://github.com/naver/nam-sdk-web/issues)로 등록해주시면 됩니다.
 
-NAM WEB SDK에 대한 전체 가이드 문서는 [여기](https://naver.github.io/glad-sdk-guide/ko/web_new/common/get_started/)에서 확인할 수 있습니다.
+NAM WEB SDK에 대한 전체 가이드 문서는 [여기](https://naver.github.io/nam-sdk-guide/web/common/get_started)에서 확인할 수 있습니다.
 
 ---
 
