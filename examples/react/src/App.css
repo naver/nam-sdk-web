@@ -1,0 +1,9 @@
+#root {
+  margin: 0 auto;
+}
+
+.ad_sample {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

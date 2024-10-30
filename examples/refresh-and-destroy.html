@@ -26,8 +26,13 @@
       });
     </script>
 
+    <button id="refresh">Refresh</button>
     <button id="destroy">Destroy</button>
     <script>
+      document.getElementById('refresh').addEventListener('click', function () {
+        var adSlot = window.gladsdk.findAdSlot('division');
+        window.gladsdk.refreshAdSlots([adSlot]);
+      });
       document.getElementById('destroy').addEventListener('click', function () {
         var adSlot = window.gladsdk.findAdSlot('division');
         window.gladsdk.destroyAdSlots([adSlot]);
