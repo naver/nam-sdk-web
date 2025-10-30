@@ -1,7 +1,7 @@
-const AD_SLOT_ELEMENT_ID = "main";
+const AD_SLOT_ELEMENT_ID = 'main';
 
-window.addEventListener("message", (e) => {
-  if (e.data.type === "preview") {
+window.addEventListener('message', (e) => {
+  if (e.data.type === 'preview') {
     const { id, ad } = e.data;
 
     console.log(id, ad);
@@ -11,26 +11,26 @@ window.addEventListener("message", (e) => {
     function sendMessage(message) {
       parent.postMessage(
         {
-          type: "preview_message",
+          type: 'preview_message',
           previewId: id,
           data: message,
         },
-        "*"
+        '*'
       );
     }
 
     window.gladsdk = window.gladsdk || { cmd: [] };
     window.gladsdk.cmd.push(() => {
       const adSlot = window.gladsdk.defineAdSlot({
-        adUnitId: "preview_ad_unit",
+        adUnitId: 'preview_ad_unit',
         adSlotElementId: AD_SLOT_ELEMENT_ID,
       });
 
       window.gladsdk.displayAdWithResponse(adSlot, {
-        requestId: "preview_request_id",
+        requestId: 'preview_request_id',
         head: {
-          version: "0.0.1",
-          description: "Naver SSP Waterfall List",
+          version: '0.0.1',
+          description: 'Naver SSP Waterfall List',
         },
         eventTracking: {
           ackImpressions: [],
@@ -46,7 +46,7 @@ window.addEventListener("message", (e) => {
           mute: [],
           close: [],
         },
-        adUnit: "preview_ad_unit",
+        adUnit: 'preview_ad_unit',
         randomNumber: 0,
         adDivId: AD_SLOT_ELEMENT_ID,
         advertiserDomains: [],
@@ -60,6 +60,7 @@ window.addEventListener("message", (e) => {
         window.gladsdk.event.AD_CLICKED,
         window.gladsdk.event.AD_IMPRESSED,
         window.gladsdk.event.ERROR,
+        window.gladsdk.event.EMPTY,
         window.gladsdk.event.AD_MUTE_COMPLETED,
         window.gladsdk.event.AD_MUTE_STATE_CHANGED,
         window.gladsdk.event.CREATIVE_META_CHANGED,
@@ -80,7 +81,7 @@ window.addEventListener("message", (e) => {
       for (const entry of entries) {
         const { width, height } = entry.contentRect;
         sendMessage({
-          event: "resize",
+          event: 'resize',
           width: width,
           height: height,
         });

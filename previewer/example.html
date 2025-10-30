@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,82 +6,84 @@
     <title>Document</title>
   </head>
   <body>
-    <iframe
-      id="preview"
-      src="index.html"
-      style="overflow: hidden; border: none"
-    ></iframe>
+    <div>
+      <iframe
+        id="preview"
+        src="https://naver.github.io/nam-sdk-web/previewer"
+        style="overflow: hidden; border: none; width: 100%; height: 100%"
+      ></iframe>
+    </div>
     <script>
-      const iframe = document.querySelector("#preview");
+      const iframe = document.querySelector('#preview');
       iframe.onload = () => {
         iframe.contentWindow.postMessage(
           {
-            type: "preview",
-            id: "1234567890",
+            type: 'preview',
+            id: '1234567890',
             ad: {
-              creativeType: "NATIVE",
-              renderType: "NN",
+              creativeType: 'NATIVE',
+              renderType: 'NN',
               adInfo: {
-                placeId: "655c162d9d9813002013b9e1",
-                adomain: ["smartstore.naver.com"],
-                crid: "18854530",
+                placeId: '655c162d9d9813002013b9e1',
+                adomain: ['smartstore.naver.com'],
+                crid: '18854530',
                 exp: 600,
                 encoded: 0,
                 adchoice: {
-                  mute: "https://g.tivan.naver.com/gfa/8WCilMQycL4boO-0zHRj67mkW_Wsd-SJwLigk4Khpt4RadMXmep4uuHpcc7lBYAdaU5BOCZ9TY9zVNkbY4N-PbA2i4aDZKWFJ1LTm9EJAPsiLOBrkLuhX-IAGh6SOlCUvbRHefyX5kU31WanBeLmk7sDt129lVP3jusRg4TBvyqGwAzGplHRfhFIXqiuQFW60uyNfKXn1gt1qqUewDMD50cl8ElemQaMVAF2kQEdGNlT5bFLsd7taefv4n1QiFLER9-sxd0JQ1g6RUAmjiT92nfp_ANqeP16Gou6NfZrfICP7k3Mj6sjITypwIGP_DXeoaTqjLqz5VPK8smT_B0CLvXkRKhEoh--oh0mQl7DcgFmXPSwbwP9-YOIlgj3pQezWdCe1OMKTzDasdrHLRsped4m8F_IAoIJDwUs6iFa0N_6OG8ESI5yG4KzxbzDCL11rKxmPM6_Lp_X4CqYGo5UoPDSJrb-525GMyyyoaHpg3ZWTBymBSbSA5clozyJcvFS6pTMw1d8qc8lcEsr4VKR6IiWoaFJKBa1frWTtDeezBxylq0x6rxFjgfv2yZaLBTMhnLLz5-cQ0_4xkU-ZsmmeshTF8oj8pUIWJ1jF6LCk6cvPcQc7SSfPjGUMxGcP1XoYOvTffHT6qb5YkTLvpxRqDg2jrukviriIgl3gZhNu5nHL-wbDiEBqPhIAa48BKTeDY6OWfknref_SKREyh5yGlBIQDsQ6RJu8rx9RRwwXPmImILT1ugpxNAs3rCbmGqtpfjYZKWx2D4pX9JJvMSaGU-HIy3kesYVMhF8qQ0_aEJQGUWUO9DoNPqF1EFN96AYFNi50g_Mqlw_Z5adMeeFiwq1xxXcolJ6gTNx427yuDYqfxOFMc5Zk13yLQcSX-LPaHzsfE5ROMWTQON8A6webVy9ZDea-1hTTwLP3_pp_VAgLak3eEdeSFuInXzeIv956uGXUR0uxJctaJVxQJEio7OMf2kc_Bdf83r0msFDo2JcaCKIaVK-gHuwapZXEZlx0u1OGGKPkHMeqh6lac2NGytLwoQFrB7zZADVri70Px09sUIzywqZSUrQQYaHnkwV1EagGvkhqgPf15j28Nevu9X6c6DzHw8Kj2lYNrebr1Z7TVubh7rheFttnR9wekF5qx1KqrBGKDsOeOYzu9VRuW1YYQ6mWdyMY2oY7iIDUTxDNMkFjd6iJWDp0PulIKCS_DRNwbuxhrAx53tX7afj95_4km83Y8X3KMnsjJAWWKAWi9kn7Gtf01yngaC0bTDRwBQ2NFa_O9kmwXwVEluX2A==/?reason=${ADMUTE_REASON}",
+                  mute: 'https://g.tivan.naver.com/gfa/8WCilMQycL4boO-0zHRj67mkW_Wsd-SJwLigk4Khpt4RadMXmep4uuHpcc7lBYAdaU5BOCZ9TY9zVNkbY4N-PbA2i4aDZKWFJ1LTm9EJAPsiLOBrkLuhX-IAGh6SOlCUvbRHefyX5kU31WanBeLmk7sDt129lVP3jusRg4TBvyqGwAzGplHRfhFIXqiuQFW60uyNfKXn1gt1qqUewDMD50cl8ElemQaMVAF2kQEdGNlT5bFLsd7taefv4n1QiFLER9-sxd0JQ1g6RUAmjiT92nfp_ANqeP16Gou6NfZrfICP7k3Mj6sjITypwIGP_DXeoaTqjLqz5VPK8smT_B0CLvXkRKhEoh--oh0mQl7DcgFmXPSwbwP9-YOIlgj3pQezWdCe1OMKTzDasdrHLRsped4m8F_IAoIJDwUs6iFa0N_6OG8ESI5yG4KzxbzDCL11rKxmPM6_Lp_X4CqYGo5UoPDSJrb-525GMyyyoaHpg3ZWTBymBSbSA5clozyJcvFS6pTMw1d8qc8lcEsr4VKR6IiWoaFJKBa1frWTtDeezBxylq0x6rxFjgfv2yZaLBTMhnLLz5-cQ0_4xkU-ZsmmeshTF8oj8pUIWJ1jF6LCk6cvPcQc7SSfPjGUMxGcP1XoYOvTffHT6qb5YkTLvpxRqDg2jrukviriIgl3gZhNu5nHL-wbDiEBqPhIAa48BKTeDY6OWfknref_SKREyh5yGlBIQDsQ6RJu8rx9RRwwXPmImILT1ugpxNAs3rCbmGqtpfjYZKWx2D4pX9JJvMSaGU-HIy3kesYVMhF8qQ0_aEJQGUWUO9DoNPqF1EFN96AYFNi50g_Mqlw_Z5adMeeFiwq1xxXcolJ6gTNx427yuDYqfxOFMc5Zk13yLQcSX-LPaHzsfE5ROMWTQON8A6webVy9ZDea-1hTTwLP3_pp_VAgLak3eEdeSFuInXzeIv956uGXUR0uxJctaJVxQJEio7OMf2kc_Bdf83r0msFDo2JcaCKIaVK-gHuwapZXEZlx0u1OGGKPkHMeqh6lac2NGytLwoQFrB7zZADVri70Px09sUIzywqZSUrQQYaHnkwV1EagGvkhqgPf15j28Nevu9X6c6DzHw8Kj2lYNrebr1Z7TVubh7rheFttnR9wekF5qx1KqrBGKDsOeOYzu9VRuW1YYQ6mWdyMY2oY7iIDUTxDNMkFjd6iJWDp0PulIKCS_DRNwbuxhrAx53tX7afj95_4km83Y8X3KMnsjJAWWKAWi9kn7Gtf01yngaC0bTDRwBQ2NFa_O9kmwXwVEluX2A==/?reason=${ADMUTE_REASON}',
                 },
                 adStyle: {
-                  type: "FN",
-                  id: "10068",
+                  type: 'FN',
+                  id: '10068',
                   deco: {
                     body: '\u003cdiv id="ad-element" class="feed_native_section type_home"\u003e  \u003cdiv class="header_area"\u003e    \u003ca class="item_link_header" target="_blank" data-gfp-role="sponsorLink"\u003e      \u003cdiv class="item_thumb"\u003e        \u003cimg src="{%=o.assets[0].icon%}" width="100%" height="auto" alt="{%=o.assets[0].iconAlt%}"\u003e      \u003c/div\u003e      \u003cspan class="item_name"\u003e{%=o.assets[0].sponsor%}\u003c/span\u003e    \u003c/a\u003e        \u003cspan class="icon_nad" role="img" aria-label="AD"\u003e\u003c/span\u003e    \u003cdiv data-gfp-role="adChoicePos"\u003e\u003c/div\u003e  \u003c/div\u003e  \u003ca class="item_link" target="_blank" data-gfp-role="link"\u003e    \u003cp class="item_title"\u003e{%=o.assets[0].desc%}\u003c/p\u003e    \u003cdiv class="item_inner type_square"\u003e      \u003cimg src="{%=o.assets[0].image%}" class="item_view_image" width="100%" height="auto"        alt="{%=o.assets[0].imageAlt%}"\u003e      {% if (o.assets[0].cta) { %}      \u003cdiv id="cta-area" class="item_text_area"\u003e        \u003cdiv class="item_bg"\u003e\u003c/div\u003e        \u003cdiv class="item_text"\u003e{%=o.assets[0].cta%}          \u003csvg width="7" height="13" viewBox="0 0 7 13" class="item_svg"\u003e            \u003cpath fill="currentColor" fill-rule="evenodd"              d="m1.408.233 5.29 5.139a.796.796 0 0 1 .301.621.796.796 0 0 1-.226.567l-.013.012-.064.055-5.288 5.14a.834.834 0 0 1-1.166-.003.798.798 0 0 1 .003-1.142L5 6 .245 1.378A.798.798 0 0 1 .23.248L.242.237A.834.834 0 0 1 1.408.233z"\u003e            \u003c/path\u003e          \u003c/svg\u003e        \u003c/div\u003e      \u003c/div\u003e      {% } %}    \u003c/div\u003e  \u003c/a\u003e\u003c/div\u003e\u003cscript type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/native_visual/5/NORAML_IMAGE_FEED_1BY1/entry/feed_native_preset.0301ded0fe.js" charset="utf-8"\u003e\u003c/script\u003e',
                     resources: [
                       {
-                        type: "css",
-                        url: "https://ssl.pstatic.net/tveta/libs/native_visual/5/NORAML_IMAGE_FEED_1BY1/core/css/feed_native.0b5e10b2b0.css",
+                        type: 'css',
+                        url: 'https://ssl.pstatic.net/tveta/libs/native_visual/5/NORAML_IMAGE_FEED_1BY1/core/css/feed_native.0b5e10b2b0.css',
                       },
                       {
-                        type: "javascript",
-                        url: "https://ssl.pstatic.net/tveta/libs/native_visual/5/NORAML_IMAGE_FEED_1BY1/core/js/feed_native.366dac8e36.js",
+                        type: 'javascript',
+                        url: 'https://ssl.pstatic.net/tveta/libs/native_visual/5/NORAML_IMAGE_FEED_1BY1/core/js/feed_native.366dac8e36.js',
                       },
                     ],
                   },
                   visual: {
-                    id: "NORAML_IMAGE_FEED_1BY1",
+                    id: 'NORAML_IMAGE_FEED_1BY1',
                   },
                 },
                 nativeData: {
                   link: {
-                    curl: "https://g.tivan.naver.com/gfa/XSXIMiOvIVOfpJxc-BIHfjBCG4qGT0s67nuk6TvVYeu4yns8sPHfMAhEepX3cVDUhgq7xWGAFyN3J4MNa6OClSVs2XcMAOt5bCFIwiZRqicIk_jM4anW03Hu7SveVTOCD-ryzjMKA69q80dCSySLy2TDi9CH8SZ7RAqaOQwi-oTDrYW0TbBErvBrRSIOQmOLTk1pPXa90jjAh0EMK2wVu4p0_xzAUKZT9jb6R0VKTW5-B4OZb_h53otvHPvt8oNnX-6cAeJglZknjHjVgdbiGycfyQ1EO3aRuAbdq4wHRE4z6RghWsAsLnqbKmqif8FKhFMe9U6bc4NE-2Eb3uqXT_WCC8fy1oUAa05YqgZtNJm8gn9WtpB8IRGhMnnKwpUZMjWUzjp4Dd56HABwAbF1ZS1jiBQoHsVP_km9YgslTNoHTZNQfcZYygNjtnyI0W_cr-Z7sEIIvo2whYl400S8jID_jBV8ul-QNefPuHvVBJPnyFLYR6R1dz28SxAGwoItb91Buix7hEDITeiAmhEVQQIaPgGQFbI4IStSF8_O5rp4bNFVm3hdSoCJy_NIFU79zVK9oN0FjseiFZDoFb_g9_1hvzcm5ThOxeaUvyf-EKVXVHOJ0hHKXxkNo3F6FrK9KOBRU9jSZceXFgHuWacyomvm1-tV6AjMTi8AcNtkMB9AeQ7b__VhwQhYSePLX2tYa34OFslejtWynkokIcF5qRWWUvIUxHP2QUFhM2Q8lBpA5DZttWkAUFiGLA6kg9HHG9RkfuiHLDRDXnn1dK1hwBp1v1nqowqB9f4E1fjbX_D8UVhBLoYwNqy4q6kOA2xTjrPUZLmH5OrcMplFo8kdguA9EmfvJubtnTr6ri9jqU4TMG5AaV53OgIaR5fOQE5g5IiTMBGQwZt_g5NH0zNg1Ybqaw7NKsEyjDMGnhJyHRjcra_80dVdLvM29BG226HiqyERJTqKRUqgYx19iY1cevS4gg_wnJ2BbAWR4ofKYpZz7IeEiReCxtAk-WnKJVfklwd27CTuqSDbwiSQhcfTu8juNAlxjdMvvde4hJE-uMeqdWH0DsRCtQHLgCpPbUeeG6VLn0uwEBdDY4Vmms7eLEJcG3hWEH0s4k5PX0pEnPlnPppU-Hml_zpaJFomT0S_nGBCcXZvThLRIeAJn34Xc9N6dHyebEQVUdaPUuhpdJGBVTmnsv7iV_ie-uPLNVwMLA8RdnLuNLdtA6gCASrftmVLBPevEvN1umgVVoxrYo1oqV2fBCIWEyJ1de7sCYPgqzgRW3mezIL-JwQQcAm9pjbxj1ZHWook2fPcp44zNJR4DWsNLliOzvYiqQB3bsJhRLmxXUGaWpMGBIEiPtKnBF-hgEC3_R-U0PtRV2MFBsna1m1f6Sel4UexiOzuMzkqO9sOGEUm2E2W2MryNbdzQ8OfEIplOvv9rLLBnQcOOqo=/",
+                    curl: 'https://g.tivan.naver.com/gfa/XSXIMiOvIVOfpJxc-BIHfjBCG4qGT0s67nuk6TvVYeu4yns8sPHfMAhEepX3cVDUhgq7xWGAFyN3J4MNa6OClSVs2XcMAOt5bCFIwiZRqicIk_jM4anW03Hu7SveVTOCD-ryzjMKA69q80dCSySLy2TDi9CH8SZ7RAqaOQwi-oTDrYW0TbBErvBrRSIOQmOLTk1pPXa90jjAh0EMK2wVu4p0_xzAUKZT9jb6R0VKTW5-B4OZb_h53otvHPvt8oNnX-6cAeJglZknjHjVgdbiGycfyQ1EO3aRuAbdq4wHRE4z6RghWsAsLnqbKmqif8FKhFMe9U6bc4NE-2Eb3uqXT_WCC8fy1oUAa05YqgZtNJm8gn9WtpB8IRGhMnnKwpUZMjWUzjp4Dd56HABwAbF1ZS1jiBQoHsVP_km9YgslTNoHTZNQfcZYygNjtnyI0W_cr-Z7sEIIvo2whYl400S8jID_jBV8ul-QNefPuHvVBJPnyFLYR6R1dz28SxAGwoItb91Buix7hEDITeiAmhEVQQIaPgGQFbI4IStSF8_O5rp4bNFVm3hdSoCJy_NIFU79zVK9oN0FjseiFZDoFb_g9_1hvzcm5ThOxeaUvyf-EKVXVHOJ0hHKXxkNo3F6FrK9KOBRU9jSZceXFgHuWacyomvm1-tV6AjMTi8AcNtkMB9AeQ7b__VhwQhYSePLX2tYa34OFslejtWynkokIcF5qRWWUvIUxHP2QUFhM2Q8lBpA5DZttWkAUFiGLA6kg9HHG9RkfuiHLDRDXnn1dK1hwBp1v1nqowqB9f4E1fjbX_D8UVhBLoYwNqy4q6kOA2xTjrPUZLmH5OrcMplFo8kdguA9EmfvJubtnTr6ri9jqU4TMG5AaV53OgIaR5fOQE5g5IiTMBGQwZt_g5NH0zNg1Ybqaw7NKsEyjDMGnhJyHRjcra_80dVdLvM29BG226HiqyERJTqKRUqgYx19iY1cevS4gg_wnJ2BbAWR4ofKYpZz7IeEiReCxtAk-WnKJVfklwd27CTuqSDbwiSQhcfTu8juNAlxjdMvvde4hJE-uMeqdWH0DsRCtQHLgCpPbUeeG6VLn0uwEBdDY4Vmms7eLEJcG3hWEH0s4k5PX0pEnPlnPppU-Hml_zpaJFomT0S_nGBCcXZvThLRIeAJn34Xc9N6dHyebEQVUdaPUuhpdJGBVTmnsv7iV_ie-uPLNVwMLA8RdnLuNLdtA6gCASrftmVLBPevEvN1umgVVoxrYo1oqV2fBCIWEyJ1de7sCYPgqzgRW3mezIL-JwQQcAm9pjbxj1ZHWook2fPcp44zNJR4DWsNLliOzvYiqQB3bsJhRLmxXUGaWpMGBIEiPtKnBF-hgEC3_R-U0PtRV2MFBsna1m1f6Sel4UexiOzuMzkqO9sOGEUm2E2W2MryNbdzQ8OfEIplOvv9rLLBnQcOOqo=/',
                     ebp: 1,
                   },
                   icon: {
-                    src: "https://naverpa-phinf.pstatic.net/MjAyNDA0MTVfNzQg/MDAxNzEzMTYzMTI1MzA0.8RFBU8_zZDhVF-0yYDEc1PuiBIifSPert0o3jgxIibkg.AioDkAauI5Ue9ybRgNIP52hk_CkowDXHWbbT9KyqM4Ug.PNG/%EC%9E%90%EB%A6%AC%EB%A1%9C%EB%A1%9C%EA%B3%A0_17131631252936205499703991275594.png",
+                    src: 'https://naverpa-phinf.pstatic.net/MjAyNDA0MTVfNzQg/MDAxNzEzMTYzMTI1MzA0.8RFBU8_zZDhVF-0yYDEc1PuiBIifSPert0o3jgxIibkg.AioDkAauI5Ue9ybRgNIP52hk_CkowDXHWbbT9KyqM4Ug.PNG/%EC%9E%90%EB%A6%AC%EB%A1%9C%EB%A1%9C%EA%B3%A0_17131631252936205499703991275594.png',
                     w: 300,
                     h: 300,
                   },
                   media: {
                     type: 1,
-                    src: "https://naverpa-phinf.pstatic.net/MjAyNDA0MTZfMTY0/MDAxNzEzMjYwMjMzMjIw.Yq3sBOieJNFi7LYrzrvV-qWPBaIyq9vXjjRvgIgpmRwg.4SbxImuN1uJTAQe97XkeAi_uYAcZutjrIIDGmsUMxSkg.PNG/001_171326023316814461388828434071197.png",
+                    src: 'https://naverpa-phinf.pstatic.net/MjAyNDA0MTZfMTY0/MDAxNzEzMjYwMjMzMjIw.Yq3sBOieJNFi7LYrzrvV-qWPBaIyq9vXjjRvgIgpmRwg.4SbxImuN1uJTAQe97XkeAi_uYAcZutjrIIDGmsUMxSkg.PNG/001_171326023316814461388828434071197.png',
                     w: 1200,
                     h: 1200,
                   },
                   sponsor: {
-                    text: "자리로몰",
+                    text: '자리로몰',
                     link: {
-                      curl: "https://g.tivan.naver.com/gfa/cXNGh4X1JzNYFDM7gSJsQpaBtPir70xH6Go0S4v-oR8wwaww8u3IUGcOeLUgXnIHRvs4lgbXvHggVT1__b-MXQBHASlZnlAn4cat2NRSSuh7d3D48UXyrH3ykD9Ix6mzt7KD9GENpyXFRqpIEwoHmODok8XiylJ2kUJyEHcQOHOiEcNDZlUq2PnyKVbgW2oj0_mt4yyT9qskGpNrVZRx5EexsI7u3XV6t8BQOnxSWpXMPcsjDEs2RL4ujbklIsI4lbo4r8EpbbbrdqSsRCf_isTvhmtjgbvSVeiYLbY4mamL7GOop8ICmnRXaXZHaiRyPA-vhjcueuxJEP0w7F0jk40PwoWLbtfAChV20StFDjPTVjq40-gP2ZiRLLPy_a33JQEaS741LDfbcBTBB_oTjDzDh5AXs1V1G0Ncc2ztI876_84A5laUnGTZa_cDlrziJ9cPN-84pCCzN4QOgUj-Az5JfLfWXATuqVrl_JnBq5SlidO-0SG62D0AVbeyhO3jvvytDFfHdzuY2l5BdNh8bhBvDJ0tgd_hOqoww1JPFaXsKZvdL5En7oEjZz3UPgL-Vq12u1EQ80mNbhPuC1N533m0WBP4PstkRpToJzT8MogQQGztZJ0s4HIDYev2YfJjzBRn5uoUNIHqm_tcaE6UeXWAVdERWD0C331iIpr9QoKMUYOs0pxU6p4UufePQut0jts45T654_Bs6jAtuFE7oYTL3FCmZo-UDq8zMwrmWuOqTBd9QIWVhgv_D4YeUJyILoJgoYfJ8udG0VsCr3CiLuQxSdGAnxZK3M1FNchup2vk5bcEWhJAktG9AHjaMkapmKBOM2O2Pge-6AY7i_LoQK4iZCpu7zn8K_LSAfrhTp_ycYw0HSRgMfz4HjVppfGPeKrVj_Ag0o2EGbcwVOguyWXpSV_yYjgOyryNjR9IpOhZc_Vpr5QnMQbr3jHmRSdcnJ2tOV7jIC6n4xAS9wPbFl_x3FXtf2AIQp7xw5-axs0Q0Do0SEKUO9AggLEqNfk_eGTl0pqfNhfYxNziRWKr9fwtH6MhBuVfEi_arFY1p2tRzXg4_8WMUj55XaUILXXZ4uE1tYK1zRnEpz7MeaSYbYIMouPPcnHiBh-SpoE6Rvql57-xt-WcZKeP8ZcoDHzkpEEsqnbUNwZxlNFLynz74QIW74af1WlID6W6li6pymtqZ1aFKpzXkqMWy2HCS6teTDpcDmvmrQpnZggHxafNCKozclZ1HAx8BzgghccY5goNj2RKpX2WQVOFb6riha_gqEF9cCNC6shDQvuxTsx59O-MFp_m2frlNi-ZAIJaNjPQcxRQi08SakBMrSTFosmkUA3kUXUlJpJWp5xSGeVAjg==/",
+                      curl: 'https://g.tivan.naver.com/gfa/cXNGh4X1JzNYFDM7gSJsQpaBtPir70xH6Go0S4v-oR8wwaww8u3IUGcOeLUgXnIHRvs4lgbXvHggVT1__b-MXQBHASlZnlAn4cat2NRSSuh7d3D48UXyrH3ykD9Ix6mzt7KD9GENpyXFRqpIEwoHmODok8XiylJ2kUJyEHcQOHOiEcNDZlUq2PnyKVbgW2oj0_mt4yyT9qskGpNrVZRx5EexsI7u3XV6t8BQOnxSWpXMPcsjDEs2RL4ujbklIsI4lbo4r8EpbbbrdqSsRCf_isTvhmtjgbvSVeiYLbY4mamL7GOop8ICmnRXaXZHaiRyPA-vhjcueuxJEP0w7F0jk40PwoWLbtfAChV20StFDjPTVjq40-gP2ZiRLLPy_a33JQEaS741LDfbcBTBB_oTjDzDh5AXs1V1G0Ncc2ztI876_84A5laUnGTZa_cDlrziJ9cPN-84pCCzN4QOgUj-Az5JfLfWXATuqVrl_JnBq5SlidO-0SG62D0AVbeyhO3jvvytDFfHdzuY2l5BdNh8bhBvDJ0tgd_hOqoww1JPFaXsKZvdL5En7oEjZz3UPgL-Vq12u1EQ80mNbhPuC1N533m0WBP4PstkRpToJzT8MogQQGztZJ0s4HIDYev2YfJjzBRn5uoUNIHqm_tcaE6UeXWAVdERWD0C331iIpr9QoKMUYOs0pxU6p4UufePQut0jts45T654_Bs6jAtuFE7oYTL3FCmZo-UDq8zMwrmWuOqTBd9QIWVhgv_D4YeUJyILoJgoYfJ8udG0VsCr3CiLuQxSdGAnxZK3M1FNchup2vk5bcEWhJAktG9AHjaMkapmKBOM2O2Pge-6AY7i_LoQK4iZCpu7zn8K_LSAfrhTp_ycYw0HSRgMfz4HjVppfGPeKrVj_Ag0o2EGbcwVOguyWXpSV_yYjgOyryNjR9IpOhZc_Vpr5QnMQbr3jHmRSdcnJ2tOV7jIC6n4xAS9wPbFl_x3FXtf2AIQp7xw5-axs0Q0Do0SEKUO9AggLEqNfk_eGTl0pqfNhfYxNziRWKr9fwtH6MhBuVfEi_arFY1p2tRzXg4_8WMUj55XaUILXXZ4uE1tYK1zRnEpz7MeaSYbYIMouPPcnHiBh-SpoE6Rvql57-xt-WcZKeP8ZcoDHzkpEEsqnbUNwZxlNFLynz74QIW74af1WlID6W6li6pymtqZ1aFKpzXkqMWy2HCS6teTDpcDmvmrQpnZggHxafNCKozclZ1HAx8BzgghccY5goNj2RKpX2WQVOFb6riha_gqEF9cCNC6shDQvuxTsx59O-MFp_m2frlNi-ZAIJaNjPQcxRQi08SakBMrSTFosmkUA3kUXUlJpJWp5xSGeVAjg==/',
                       ebp: 1,
                     },
                   },
                   desc: {
-                    text: "하루 21분 잠들기전 경추마사지",
+                    text: '하루 21분 잠들기전 경추마사지',
                   },
                   cta: {
-                    text: "더 알아보기",
+                    text: '더 알아보기',
                     ext: {
                       style: {
                         default: {
-                          bgColor: "#144D34",
+                          bgColor: '#144D34',
                         },
                       },
                     },
@@ -90,17 +92,17 @@
               },
             },
           },
-          "*"
+          '*'
         );
       };
 
-      window.addEventListener("message", (e) => {
-        if (e.data.type === "preview_message") {
+      window.addEventListener('message', (e) => {
+        if (e.data.type === 'preview_message') {
           const { previewId, data } = e.data;
 
           console.log(previewId, data);
 
-          if (data.event === "resize") {
+          if (data.event === 'resize') {
             const { width, height } = data;
             iframe.style.width = `${width}px`;
             iframe.style.height = `${height}px`;
