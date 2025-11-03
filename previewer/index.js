@@ -92,3 +92,17 @@ window.addEventListener('message', (e) => {
     resizeObserver.observe(document.body);
   }
 });
+
+const searchParams = new URLSearchParams(window.location.search);
+const feed = searchParams.get('feed');
+
+if (feed) {
+  document.getElementById('pre').style.display = 'block';
+  document.getElementById('post').style.display = 'block';
+  document.body.style.overflow = 'auto';
+}
+
+if (typeof +feed === 'number' && !isNaN(+feed) && +feed > 0) {
+  document.getElementById('pre').style.height = `${+feed}px`;
+  document.getElementById('post').style.height = `${+feed}px`;
+}

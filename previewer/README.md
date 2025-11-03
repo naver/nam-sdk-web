@@ -37,6 +37,10 @@
 </html>
 ```
 
+> 광고 영역 상하에 컨텐츠 영역을 추가하려면 src 주소에 `?feed={height}` 쿼리 파라미터를 추가하세요.  
+> 예: `~/previewer?feed=200`  or  `~/previewer?feed=true`  
+> `feed=true` 설정 시 기본 값 300px 설정
+
 ### 2. 광고 데이터 전송
 
 iframe이 로드된 후, `postMessage`를 통해 광고 데이터를 전송합니다:
