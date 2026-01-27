@@ -4,8 +4,6 @@ window.addEventListener('message', (e) => {
   if (e.data.type === 'preview') {
     const { id, ad } = e.data;
 
-    console.log(id, ad);
-
     if (id === undefined || !ad) return;
 
     function sendMessage(message) {
