@@ -23,7 +23,7 @@ NAM WEB SDK에 대한 전체 가이드 문서는 [NAM SDK 문서](https://naver.
       <meta charset="utf-8" />
       <title>Test NAM SDK</title>
       <!-- 아래 스크립트를 추가 -->
-      <script async src="https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js"></script>
+      <script async src="https://sdk.naverads.net/libs/glad/prod/gfp-core.js"></script>
       <script>
         window.gladsdk = window.gladsdk || { cmd: [] };
       </script>
@@ -41,7 +41,7 @@ NAM WEB SDK에 대한 전체 가이드 문서는 [NAM SDK 문서](https://naver.
     <head>
       <meta charset="utf-8" />
       <title>Test NAM SDK</title>
-      <script async src="https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js"></script>
+      <script async src="https://sdk.naverads.net/libs/glad/prod/gfp-core.js"></script>
       <script>
         window.gladsdk = window.gladsdk || { cmd: [] };
 
