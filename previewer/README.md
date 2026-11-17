@@ -62,11 +62,18 @@ iframe.onload = () => {
         },
         // 기타 광고 관련 데이터...
       },
+      // (선택) 광고 표시 전에 광고 슬롯에 설정할 hostMeta (adSlot.setHostMeta(key, value))
+      hostMeta: {
+        NativeHeight: 800, // 예: 숏폼 광고의 높이
+      },
     },
     '*'
   );
 };
 ```
+
+`hostMeta` 는 선택 필드입니다. 광고를 싣는 페이지가 정해 주어야 하는 값을 키 → 값 객체로 보내면, 프리뷰어가 광고를 표시하기 전에 키마다 `adSlot.setHostMeta(key, value)` 를 호출합니다.
+예를 들어 숏폼 템플릿은 `NativeHeight` 로 광고 높이를 정하므로, 이 값을 보내지 않으면 광고가 소재 비율 높이로만 그려집니다.
 
 ### 3. 이벤트 수신
 

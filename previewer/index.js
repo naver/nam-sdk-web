@@ -2,7 +2,7 @@ const AD_SLOT_ELEMENT_ID = 'main';
 
 window.addEventListener('message', (e) => {
   if (e.data.type === 'preview') {
-    const { id, ad } = e.data;
+    const { id, ad, hostMeta } = e.data;
 
     if (id === undefined || !ad) return;
 
@@ -23,6 +23,12 @@ window.addEventListener('message', (e) => {
         adUnitId: 'preview_ad_unit',
         adSlotElementId: AD_SLOT_ELEMENT_ID,
       });
+
+      // 광고를 싣는 쪽이 정하는 값(hostMeta)을 광고 표시 전에 이 슬롯에 설정한다.
+      // 예: 숏폼 템플릿은 NativeHeight 로 광고 높이를 정한다.
+      if (hostMeta && typeof hostMeta === 'object') {
+        Object.keys(hostMeta).forEach((key) => adSlot.setHostMeta(key, hostMeta[key]));
+      }
 
       window.gladsdk.displayAdWithResponse(adSlot, {
         requestId: 'preview_request_id',
